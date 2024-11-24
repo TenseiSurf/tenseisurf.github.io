@@ -1,8 +1,10 @@
 <script lang="ts">
     import Rain from '$lib/components/Rain.svelte';
+    import RainAudio from '$lib/components/RainAudio.svelte';
 </script>
 
 <Rain />
+<RainAudio />
 
 <div class="page-layout">
   <div class="side-image left">
