@@ -15,7 +15,8 @@ const config = {
 		}),
 		paths: {
 			base: '/tenseisurf'
-		}
+		},
+		appDir: 'app'
 	}
 };
 
