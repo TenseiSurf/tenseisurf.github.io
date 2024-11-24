@@ -8,7 +8,7 @@
 
 <div class="page-layout">
   <div class="side-image left">
-    <img src="/tenseisurf/reimu.png" alt="Reimu Left" />
+    <img src="reimu.png" alt="Reimu Left" />
   </div>
 
   <div class="container">
@@ -24,7 +24,7 @@
   </div>
 
   <div class="side-image right">
-    <img src="/tenseisurf/reimu.png" alt="Reimu Right" />
+    <img src="reimu.png" alt="Reimu Right" />
   </div>
 </div>
 

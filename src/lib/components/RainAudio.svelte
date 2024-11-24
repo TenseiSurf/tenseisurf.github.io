@@ -5,7 +5,7 @@
 
   onMount(() => {
     if (audio) {
-      audio.volume = 0.3; // Set initial volume to 30%
+      audio.volume = 0.3;
       audio.play().catch(error => {
         console.log('Audio autoplay failed:', error);
       });
@@ -15,13 +15,13 @@
 
 <audio
   bind:this={audio}
-  src="/tenseisurf/Rain.wav"
+  src="Rain.wav"
   loop
   preload="auto"
 ></audio>
 
 <style>
   audio {
-    display: none; /* Hide the audio element */
+    display: none;
   }
 </style> 

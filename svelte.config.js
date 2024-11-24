@@ -7,10 +7,13 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			fallback: '404.html'
+			pages: 'build',
+			assets: 'build',
+			fallback: 'index.html'
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/tenseisurf' : ''
+			base: process.env.NODE_ENV === 'production' ? '/tenseisurf' : '',
+			assets: process.env.NODE_ENV === 'production' ? 'https://tenseisurf.github.io/tenseisurf' : ''
 		}
 	}
 };
