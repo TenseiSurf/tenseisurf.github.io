@@ -12,8 +12,7 @@ const config = {
 			fallback: 'index.html'
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/tenseisurf' : '',
-			assets: process.env.NODE_ENV === 'production' ? 'https://tenseisurf.github.io/tenseisurf' : ''
+			base: '/tenseisurf'
 		}
 	}
 };
