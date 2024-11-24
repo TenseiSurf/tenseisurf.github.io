@@ -1,68 +1,86 @@
 <script lang="ts">
-    let count = $state(0);
-  
-    function increment() {
-      count++;
-    }
-  </script>
-  
-  <div class="container">
-    <h1>Tensei_Surf</h1>
-  
-    <div class="card">
-      <button onclick={increment}>
-        Count is {count}
-      </button>
-    </div>
-  
-    <p class="info">
-      Edit <code>src/routes/+page.svelte</code> to test hot module replacement.
-    </p>
+    import Rain from '$lib/components/Rain.svelte';
+</script>
+
+<Rain />
+
+<div class="page-layout">
+  <div class="side-image left">
+    <img src="/reimu.png" alt="Reimu Left" />
   </div>
-  
-  <style>
-    .container {
-      text-align: center;
-      padding: 2rem 0;
+
+  <div class="container">
+    <div class="content-center">
+      <h1>Tensei_Surf</h1>
+    </div>
+  </div>
+
+  <div class="side-image right">
+    <img src="/reimu.png" alt="Reimu Right" />
+  </div>
+</div>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .page-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+  }
+
+  .side-image {
+    flex: 0 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .side-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .side-image.left img {
+    transform: scaleX(-1);
+  }
+
+  .container {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-center {
+    text-align: center;
+  }
+
+  h1 {
+    color: #ff69b4;
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
     }
-  
-    h1 {
-      color: #ff69b4;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
+    to {
+      text-shadow: 0 0 30px rgba(255, 105, 180, 0.8),
+                   0 0 40px rgba(255, 105, 180, 0.3);
     }
-  
-    .card {
-      padding: 2rem;
-      margin: 2rem 0;
-      background-color: rgba(255, 105, 180, 0.1);
-      border-radius: 8px;
-      border: 1px solid rgba(255, 105, 180, 0.2);
-    }
-  
-    button {
-      padding: 0.8rem 1.5rem;
-      background-color: #ff69b4;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-  
-    button:hover {
-      background-color: #ff99cc;
-    }
-  
-    .info {
-      color: rgba(255, 255, 255, 0.6);
-    }
-  
-    code {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-  </style>
+  }
+</style>
