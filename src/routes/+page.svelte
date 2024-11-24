@@ -31,7 +31,7 @@
 <style>
   :global(body) {
     margin: 0;
-    background-color: #1a1a1a;
+    background-color: #1a1a1a !important;
     color: #ffffff;
   }
 
