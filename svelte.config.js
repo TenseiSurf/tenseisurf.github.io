@@ -7,16 +7,11 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: 'index.html',
-			precompress: false,
-			strict: true
+			fallback: '404.html'
 		}),
 		paths: {
-			base: '/tenseisurf'
-		},
-		appDir: 'app'
+			base: process.env.NODE_ENV === 'production' ? '/tenseisurf' : ''
+		}
 	}
 };
 
