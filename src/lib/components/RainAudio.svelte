@@ -15,10 +15,10 @@
 
 <audio
   bind:this={audio}
-  src="/Rain.wav"
+  src="/tenseisurf/Rain.wav"
   loop
   preload="auto"
-/>
+></audio>
 
 <style>
   audio {
