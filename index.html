@@ -2,31 +2,30 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="/tenseisurf/favicon.png" />
+		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/entry/start.BJpDeoek.js">
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/chunks/entry.DdYH_RMH.js">
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/chunks/runtime.BJvBPu94.js">
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/entry/app.C7CS194C.js">
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/chunks/store.B4Q-HBz0.js">
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/chunks/disclose-version.D8xr734e.js">
-		<link rel="modulepreload" href="/tenseisurf/_app/immutable/chunks/index-client.DfgUDcTI.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.CCPUaJDU.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry._XWm5Kd0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.W2pu3yam.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.BmedtpF5.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.MsfiLd0m.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.WxWe8EyI.js">
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_1hc7r23 = {
-						base: "/tenseisurf",
+					__sveltekit_1wkear9 = {
+						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/tenseisurf"
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/tenseisurf/_app/immutable/entry/start.BJpDeoek.js"),
-						import("/tenseisurf/_app/immutable/entry/app.C7CS194C.js")
+						import("./_app/immutable/entry/start.CCPUaJDU.js"),
+						import("./_app/immutable/entry/app.MsfiLd0m.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
