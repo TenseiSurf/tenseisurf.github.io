@@ -2,6 +2,7 @@
     import Rain from '$lib/components/Rain.svelte';
     import RainAudio from '$lib/components/RainAudio.svelte';
     import { base } from '$app/paths';
+    import Debug from './Debug.svelte';
 </script>
 
 <Rain />
@@ -28,6 +29,10 @@
     <img src="{base}/reimu.png" alt="Reimu Right" />
   </div>
 </div>
+
+{#if import.meta.env.DEV || new URLSearchParams(window?.location?.search).has('debug')}
+    <Debug />
+{/if}
 
 <style>
   :global(body) {
