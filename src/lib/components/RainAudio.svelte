@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
 
   let audio: HTMLAudioElement;
 
@@ -15,7 +16,7 @@
 
 <audio
   bind:this={audio}
-  src="/tenseisurf/Rain.wav"
+  src="{base}/Rain.wav"
   loop
   preload="auto"
 ></audio>

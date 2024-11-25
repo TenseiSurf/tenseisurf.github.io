@@ -19,15 +19,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
-        run: npm run build
+        run: NODE_ENV=production npm run build
+
+      - name: Add .nojekyll file
+        run: touch build/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-          branch: gh-pages 
+          branch: gh-pages
+          clean: true 

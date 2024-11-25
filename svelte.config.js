@@ -6,13 +6,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: 'index.html'
-		}),
+		adapter: adapter(),
 		paths: {
-			base: '/tenseisurf'
+			base: process.env.NODE_ENV === 'production' ? '/tenseisurf' : ''
 		}
 	}
 };
