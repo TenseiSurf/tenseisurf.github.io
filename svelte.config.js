@@ -9,13 +9,11 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
-			strict: false
+			fallback: 'index.html'
 		}),
 		paths: {
 			base: '/tenseisurf'
-		},
-		appDir: 'app'
+		}
 	}
 };
 

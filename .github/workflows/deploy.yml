@@ -3,10 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # this is correct for your default branch
 
 permissions:
-  contents: write
+  contents: write  # this is important for deployment
 
 jobs:
   build-and-deploy:
@@ -19,30 +19,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build
-        run: NODE_ENV=production npm run build
-
-      - name: Debug Build Output
-        run: |
-          echo "Build directory contents:"
-          ls -la build/
-          echo "Index.html contents:"
-          cat build/index.html
-
-      - name: Add .nojekyll file
-        run: |
-          touch build/.nojekyll
-          echo "Final build directory contents:"
-          ls -la build/
+        run: npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-          branch: gh-pages
-          clean: true
+          branch: gh-pages 
