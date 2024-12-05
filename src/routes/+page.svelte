@@ -105,4 +105,42 @@
                    0 0 40px rgba(255, 105, 180, 0.3);
     }
   }
+
+  @media (max-width: 768px) {
+    .page-layout {
+      flex-direction: column;
+    }
+
+    .side-image {
+      flex: 0 0 auto;
+      padding: 0.5rem;
+    }
+
+    .side-image img {
+      max-height: 150px;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .summary {
+      font-size: 1rem;
+      padding: 0.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .side-image img {
+      max-height: 100px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
 </style>
