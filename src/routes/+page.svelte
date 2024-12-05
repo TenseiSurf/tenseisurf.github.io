@@ -19,7 +19,7 @@
         Welcome, this is a project that I'm working on in my free time.
         I didn't like how the current Counter Strike Source Surf servers gatekept voting for maps, so I am making my own.
         More work needs to be done, but this is just the beginning. 
-        Stay tuned for more updates!
+        Stay tuned for more updates!!!
       </div>
     </div>
   </div>
